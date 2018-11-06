@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:animateLayoutChanges="true"
+    android:orientation="vertical">
+
+    <!--<com.meicam.sdk.NvsLiveWindow-->
+        <!--android:id="@+id/liveWindow"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent" />-->
+
+    <ImageView
+        android:id="@+id/closeButton_cs"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginLeft="13dp"
+        android:clickable="true"
+        android:layout_marginTop="20dp"
+        android:background="@mipmap/icon_close"
+        android:contentDescription="@null"
+        android:focusable="true"
+        android:layout_marginStart="13dp" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="13dp"
+        android:layout_marginTop="20dp"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="13dp"
+        tools:ignore="RelativeOverlap">
+
+        <TextView
+            android:id="@+id/captureScene_switch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            android:clickable="true"
+            android:drawableTop="@drawable/switch_cs"
+            android:gravity="center"
+            android:text="@string/switch_camera"
+            android:textColor="#ffffffff"
+            android:textSize="14sp"
+            android:focusable="true" />
+
+        <TextView
+            android:id="@+id/captureScene_flash"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            android:clickable="true"
+            android:drawableTop="@drawable/flash_cs"
+            android:gravity="center"
+            android:text="@string/flash_cs"
+            android:textColor="#ffffffff"
+            android:textSize="14sp"
+            android:focusable="true" />
+
+        <TextView
+            android:id="@+id/captureScene_background"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:drawableTop="@drawable/background_cs"
+            android:gravity="center"
+            android:text="@string/background_cs"
+            android:textColor="#ffffffff"
+            android:textSize="14sp"
+            android:focusable="true" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/cs_layout_background"
+        android:layout_width="match_parent"
+        android:layout_height="140dp"
+        android:layout_alignParentBottom="true"
+        android:background="#994d4f51"
+        android:orientation="vertical"
+        android:gravity="center_horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="21dp"
+            android:drawableLeft="@drawable/notice_cs"
+            android:drawablePadding="15dp"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:singleLine="true"
+            android:text="@string/tips_cs"
+            android:textColor="#ffffffff"
+            android:textSize="15sp"
+            android:drawableStart="@drawable/notice_cs" />
+        <View
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:background="#ff979797"
+            android:layout_height="1dp"/>
+
+        <RadioGroup
+            android:id="@+id/cs_radioGroup"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/cs_radioButton1"
+                android:layout_width="49dp"
+                android:layout_height="49dp"
+                android:background="@drawable/scene1"
+                android:layout_marginLeft="12dp"
+                android:button="@null"
+                android:layout_marginStart="12dp" />
+
+            <RadioButton
+                android:id="@+id/cs_radioButton2"
+                android:layout_width="49dp"
+                android:layout_height="49dp"
+                android:background="@drawable/scene2"
+                android:layout_marginLeft="12dp"
+                android:button="@null"
+                android:layout_marginStart="12dp" />
+        </RadioGroup>
+    </LinearLayout>
+</RelativeLayout>
